@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台北観光スポット - Taiwan App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>台北観光スポット</h1>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">すべて</button>
+                <button class="filter-btn" data-filter="want-to-visit">行きたい</button>
+                <button class="filter-btn" data-filter="visited">行った</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="spots-grid" id="spotsGrid">
+                <!-- 観光スポットカードがここに動的に生成されます -->
+            </div>
+        </main>
+    </div>
+
+    <div class="modal" id="spotModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-actions">
+                        <button class="btn btn-want" id="modalWantBtn">行きたい</button>
+                        <button class="btn btn-visited" id="modalVisitedBtn">行った</button>
+                        <button class="btn btn-reset" id="modalResetBtn">リセット</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
